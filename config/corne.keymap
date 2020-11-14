@@ -40,7 +40,7 @@
 //
                         bindings = <
    &none &kp EXCL &kp AT &kp ASTR &kp AMPS &kp PIPE     &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
-   &none &kp TILDE &kp LT &kp PRCNT &kp GT &kp D     &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none // TODO work on £ symbol
+   &none &kp TILDE &kp LT &kp PRCNT &kp GT &kp D     &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
    &none &kp GRAVE &kp PLUS &kp MINUS &kp EQUALS &kp B    &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
                    &kp ESC &kp BKSP &kp LSFT  &kp MINUS &kp SPC &kp RET
                         >;
@@ -54,7 +54,7 @@
 //
                         bindings = <
    &none &none &none &none &none &none        &kp ASTR &kp 7 &kp 8 &kp 9 &kp FSLH &none     
-   &none &none &kp K_CUT &kp K_COPY &kp K_PASTE &none        &none &kp 4 &kp 5 &kp 6 &none &none     
+   &none &none K_CUT K_COPY K_PASTE &none        &none &kp 4 &kp 5 &kp 6 &none &none     
    &none &none &none &none &none &none        &none &kp 1 &kp 2 &kp 3 &none &none     
                    &kp ESC &kp BKSP &kp LSFT  &kp MINUS &kp 0 &kp RET
                         >;
