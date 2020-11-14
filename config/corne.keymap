@@ -10,17 +10,19 @@
 
 # define DEFAULT 0
 # define NUMBER 1
+# define SYMBOL 2
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |      |  Q  |  W  |  F  |  P  |  G  |    |  J  |  L   |  U  |  Y  |  ;  |      |
-// |      |  A  |  R  |  S  |  T  |  D  |    |  H  |  N   |  E  |  I  |  O  |      |
-// |      |  Z  |  X  |  C  |  V  |  B  |    |  K  |  M   |  ,  |  .  |  '  |      |
+// --------------------------------------    -------------------------------------
+// |      |  Q  |  W  |  F  |  P  |  G  |    |  J  |  L   |  U  |  Y  |  ;  |    |
+// |      |  A  |  R  |  S  |  T  |  D  |    |  H  |  N   |  E  |  I  |  O  |    |
+// |      |  Z  |  X  |  C  |  V  |  B  |    |  K  |  M   |  ,  |  .  |  '  |    |
 //                    | ESC | BSP | SFT |    | MIN | SPC  | ENT |
+
                         bindings = <
    &kp TAB  &kp Q &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U    &kp Y   &kp SCLN &kp BKSP
    &kp LCTL &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E    &kp I   &kp O    &kp QUOT
