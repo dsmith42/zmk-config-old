@@ -31,7 +31,7 @@
    &kp TAB  &kp Q &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U    &kp Y   &kp SCLN &kp BKSP
    &kp LCTL &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E    &kp I   &kp O    &kp QUOT
    &kp LSFT &kp Z &kp X &kp C &kp V &kp B     &kp K &kp M  &kp CMMA &kp DOT &kp QUOT &kp RSFT
-                   &lt 1 ESC &lt SYMBOL BKSP &mt LSFT TAB &kp MINUS &kp SPC &kp RET
+                   &lt NUMBER ESC &lt SYMBOL BKSP &mt LSFT TAB &kp MINUS &kp SPC &kp RET
                         >;
                 };
 
@@ -39,7 +39,7 @@
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       | BT_CLR|     |       |   7   |   8   |   9   |       |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       |   4   |   5   |   6   |       |       |
+// |       |       |  CUT  | COPY  | PASTE |       |     |       |   4   |   5   |   6   |       |       |
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |   1   |   2   |   3   |       |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -48,7 +48,7 @@
 
                         bindings = <
    &none  &none  &none  &none  &none  &bt BT_CLR         &none  &kp N7  &kp N8  &kp N9  &none  &none    
-   &none  &none  &none  &none  &none  &none              &none  &kp N4  &kp N5  &kp N6  &none  &none    
+   &none  &none  &kp K_CUT &kp K_COPY &kp K_PASTE &none              &none  &kp N4  &kp N5  &kp N6  &none  &none    
    &none  &none  &none  &none  &none  &none              &none  &kp N1  &kp N2  &kp N3  &none  &none    
                         &trans &trans &trans             &trans &kp 0 &trans 
                         >;
