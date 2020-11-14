@@ -10,17 +10,23 @@
 
 # define DEFAULT 0
 # define NUMBER 1
+# define SYMBOL 2
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |      |  Q  |  W  |  F  |  P  |  G  |    |  J  |  L   |  U  |  Y  |  ;  |      |
-// |      |  A  |  R  |  S  |  T  |  D  |    |  H  |  N   |  E  |  I  |  O  |      |
-// |      |  Z  |  X  |  C  |  V  |  B  |    |  K  |  M   |  ,  |  .  |  '  |      |
-//                    | ESC | BSP | SFT |    | MIN | SPC  | ENT |
+// -------------------------------------------------     -------------------------------------------------
+// |       |   Q   |   W   |   F   |   P   |   G   |     |   J   |   L   |   U   |   Y   |   ;   |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |   A   |   R   |   S   |   T   |   D   |     |   H   |   N   |   E   |   I   |   O   |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |   Z   |   X   |   C   |   V   |   B   |     |   K   |   M   |   ,   |   .   |   '   |       |
+// -------------------------------------------------     -------------------------------------------------
+//                         |ESC_NUM|BSP_SYM|TAB_SFT|     |MIN_ARR|SPC_NAV|ENT_THU|
+//                         -------------------------     -------------------------
+
                         bindings = <
    &kp TAB  &kp Q &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U    &kp Y   &kp SCLN &kp BKSP
    &kp LCTL &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E    &kp I   &kp O    &kp QUOT
@@ -28,33 +34,44 @@
                    &lt NUMBER ESC &kp BKSP &mt LSFT TAB &kp MINUS &kp SPC &kp RET
                         >;
                 };
+
                 number_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// -------------------------------------------------     -------------------------------------------------
+// |       |       |       |       |       | BT_CLR|     |       |   7   |   8   |   9   |       |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |       |       |       |       |       |     |       |   4   |   5   |   6   |       |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |       |       |       |       |       |     |       |   1   |   2   |   3   |       |       |
+// -------------------------------------------------     -------------------------------------------------
+//                         |  NUM  |       |       |     |       |   0   |       |
+//                         -------------------------     -------------------------
+
                         bindings = <
-   &kp ESC    &kp NUM_1    &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5         &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 &kp BKSP
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp LARW  &kp DARW  &kp UARW  &kp RARW  &trans    &trans
-   &kp LSFT   &trans       &trans       &trans       &trans       &trans            &trans    &trans    &trans    &trans    &trans    &trans
-                                        &kp LGUI     &trans       &kp SPC           &kp RET &trans &kp RALT
+   &none  &none  &none  &none  &none  &bt BT_CLR      &none  &kp 7  &kp 8  &kp 9  &none  &none    
+   &none  &none  &none  &none  &none  &none      &none  &kp 4  &kp 5  &kp 6  &none  &none    
+   &none  &none  &none  &none  &none  &none      &none  &kp 1  &kp 2  &kp 3  &none  &none    
+                        &trans &trans &trans    &trans &kp 0 &trans 
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |  ~   | // TODO: Fix this row when &mkp is committed
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  ESC &kp BANG  &kp ATSN  &kp HASH  &kp CURU  &kp PRCT    &kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN &kp BKSP
-   &kp LCTL &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp PIPE &kp GRAV
-   &kp LSFT &trans    &trans    &trans    &trans    &trans      &trans    &trans   &trans   &trans   &kp BSLH &kp TILD
-                                      &kp LGUI &trans &kp SPC   &kp RET &trans &kp RALT
-                        >;
-                };
+//                symbol_layer {
+// -------------------------------------------------     -------------------------------------------------
+// |       |   !   |   @   |   *   |   &   |   |   |     |   |   |   [   |   ^   |   ]   |   :   |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |   ~   |   <   |   %   |   >   |   £   |     |   ?   |   (   |   $   |   )   |   /   |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |   `   |   +   |   -   |   =   |   €   |     |       |   {   |   #   |   }   |   \   |       |
+// -------------------------------------------------     -------------------------------------------------
+//                         |       |  SYM  |       |     |       |       |       |
+//                         -------------------------     -------------------------
+//
+//                        bindings = <
+//   &none  &kp EXCL &kp AT &kp ASTR &kp AMPS &kp PIPE      &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
+//   &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp D        &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
+//   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp B   &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
+//                        &trans &trans &trans    &trans &kp 0 &trans 
+//                          >;
+//               };
         };
 };
 
