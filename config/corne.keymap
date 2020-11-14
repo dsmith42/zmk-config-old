@@ -54,7 +54,7 @@
 //
                         bindings = <
    &none &none &none &none &none &none        &kp ASTR &kp 7 &kp 8 &kp 9 &kp FSLH &none     
-   &none &none K_CUT K_COPY K_PASTE &none        &none &kp 4 &kp 5 &kp 6 &none &none     
+   &none &none &none &none &none &none        &none &kp 4 &kp 5 &kp 6 &none &none     
    &none &none &none &none &none &none        &none &kp 1 &kp 2 &kp 3 &none &none     
                    &kp ESC &kp BKSP &kp LSFT  &kp MINUS &kp 0 &kp RET
                         >;
