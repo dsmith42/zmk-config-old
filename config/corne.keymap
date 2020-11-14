@@ -54,7 +54,7 @@
                         >;
                 };
 
-                symbol_layer {
+//                symbol_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |   !   |   @   |   *   |   &   |   |   |     |   |   |   [   |   ^   |   ]   |   :   |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -64,14 +64,14 @@
 // -------------------------------------------------     -------------------------------------------------
 //                         |       |  SYM  |       |     |       |       |       |
 //                         -------------------------     -------------------------
-
-                        bindings = <
-   &none  &kp EXCL &kp AT &kp ASTR &kp AMPS &kp PIPE      &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
-   &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp D        &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
-   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp B   &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
-                        &trans &trans &trans    &trans &kp 0 &trans 
-                          >;
-               };
+//
+//                        bindings = <
+//   &none  &kp EXCL &kp AT &kp ASTR &kp AMPS &kp PIPE      &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
+//   &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp D        &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
+//   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp B   &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
+//                        &trans &trans &trans    &trans &kp 0 &trans 
+//                          >;
+//               };
         };
 };
 
