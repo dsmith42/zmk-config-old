@@ -14,10 +14,6 @@
 # define NAV 3
 
 / {
-    behaviors {
-      hm: homerow_mods {
-    }
-
     keymap {
       compatible = "zmk,keymap";
       
