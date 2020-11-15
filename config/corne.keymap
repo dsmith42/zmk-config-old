@@ -13,6 +13,7 @@
 # define SYM 2
 # define NAV 3
 # define ARR 4
+# define THU 5
 
 / {
   behaviors {
@@ -40,21 +41,21 @@
 // |       |   Z   |   X   |   C   |   V   |   B   |     |   K   |   M   |   ,   |   .   |   '   |       |
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
-//                         |ESC_NUM|BSP_SYM|TAB_SFT|     |MIN_ARR|SPC_NAV|ENT_THU|
-//                         |       |       |       |     |       |       |       |
+//                         |  ESC  |  BSP  |  Tab  |     [   -   | Space | Enter |
+//                         | Number| Symbol| Shift |     |Arrange|  Nav  | Thumb |
 //                         -------------------------     -------------------------
 
       bindings = <
    &none &hm LCTL Q  &hm LALT W  &hm LGUI F  &kp P  &kp G        &kp J  &kp L  &hm LGUI U  &hm LALT Y  &hm LCTRL SCLN  &none
    &none &kp A       &kp R       &kp S  &hm LSFT T  &kp D        &kp H  &hm LSFT N  &kp E  &kp I  &kp O  &none
    &none &kp Z       &kp X       &kp C  &kp V       &kp B        &kp K   &kp M  &kp CMMA &kp DOT &kp QUOT &none
-                  &lt NUM ESC  &lt SYM BKSP  &mt LSFT TAB        &lt ARR MINUS &lt NAV SPC &kp ENTER
+                  &lt NUM ESC  &lt SYM BKSP  &mt LSFT TAB        &lt ARR MINUS &lt NAV SPC &lt THU ENTER
       >;
     };
 
     number_layer {
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       | BT_CLR|     |       |   7   |   8   |   9   |       |       |
+// |       |       |       |       |       |       |     |       |   7   |   8   |   9   |       |       |
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |  CUT  | COPY  | PASTE |       |     |       |   4   |   5   |   6   |       |       |
@@ -68,7 +69,7 @@
 //                         -------------------------     -------------------------
 
       bindings = <
-   &none  &none  &none  &none  &none  &bt BT_CLR         &none  &kp N7  &kp N8  &kp N9  &none  &none    
+   &none  &none  &none  &none  &none  &none              &none  &kp N7  &kp N8  &kp N9  &none  &none    
    &none  &none  &kp LG(X) &kp LG(C) &kp LG(V) &none     &none  &kp N4  &kp N5  &kp N6  &none  &none    
    &none  &none  &none  &none  &none  &none              &none  &kp N1  &kp N2  &kp N3  &none  &none    
                         &trans &trans &trans             &trans &kp N0 &trans 
@@ -138,6 +139,29 @@
    &none  &kp LC(LA(D))   &kp LC(LA(E))   &kp LC(LA(F))   &kp LC(LA(T))   &kp LC(LA(G))      &kp LC(LA(LG(RIGHT)))  &kp LC(LA(LEFT))  &kp LC(LA(DOWN))  &kp LC(LA(RIGHT))  &kp LC(LA(LG(LEFT)))  &none
    &none  &kp LC(LA(CMMA)) &kp LC(LA(N3)) &kp LC(LA(C))   &kp LC(LA(N4))  &kp LC(LA(DOT))    &none  &kp LC(LA(J))   &kp LC(LA(J))  &kp LC(LA(BKSP))  &none  &none 
                                                                      &trans &trans &trans    &trans &trans &trans 
+      >;
+    };
+
+    thumb_layer {
+// -------------------------------------------------     -------------------------------------------------
+// |       | BT    |       |       |       |       |     |       | Input |       |       | Txt + |       |
+// |       | Clear |       |       |       |       |     |       | Lang  |       |       |       |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |       | BT    | BT    |       |       |     |       |       | Emoji |       | Txt - |       |
+// |       |       | Prev  | Next  |       |       |     |       |       |       |       |       |       |
+// -------------------------------------------------     -------------------------------------------------
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// -------------------------------------------------     -------------------------------------------------
+//                         |       |       |       |     |       |       |       |
+//                         |       |       |       |     |       |       |       |
+//                         -------------------------     -------------------------
+
+      bindings = <
+   &none  &bt BT_CLR  &none  &none  &none  &none             &none  &kp LG(LC(LA(SPC)))  &none  &none  &kp LG(PLUS)  &none
+   &none  &none  &none  &none  &none  &none              &none  &none  &kp LG(LC(SPC))  &none  &kp LG(MINUS)  &none
+   &none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+                     &trans  &trans  &trans              &trans  &trans  &trans 
       >;
     };
   };
