@@ -162,7 +162,6 @@
    &none  &none  &none  &none  &none  &none              &none  &none  &kp LG(LC(SPC))  &none  &kp LG(MINUS)  &none
    &none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
                      &trans  &trans  &trans              &trans  &trans  &trans 
-      >; 
       >;
     };
   };
