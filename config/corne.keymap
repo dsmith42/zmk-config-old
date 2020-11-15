@@ -13,10 +13,10 @@
 # define SYMBOL 2
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+  keymap {
+    compatible = "zmk,keymap";
 
-                default_layer {
+    default_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |   Q   |   W   |   F   |   P   |   G   |     |   J   |   L   |   U   |   Y   |   ;   |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -27,15 +27,15 @@
 //                         |ESC_NUM|BSP_SYM|TAB_SFT|     |MIN_ARR|SPC_NAV|ENT_THU|
 //                         -------------------------     -------------------------
 
-                        bindings = <
+      bindings = <
    &kp TAB  &kp Q &kp W &kp F &kp P &kp G     &kp J &kp L  &kp U    &kp Y   &kp SCLN &kp BKSP
    &kp LCTL &kp A &kp R &kp S &kp T &kp D     &kp H &kp N  &kp E    &kp I   &kp O    &kp QUOT
    &kp LSFT &kp Z &kp X &kp C &kp V &kp B     &kp K &kp M  &kp CMMA &kp DOT &kp QUOT &kp RSFT
                    &lt NUMBER ESC &lt SYMBOL BKSP &mt LSFT TAB &kp MINUS &kp SPC &kp RET
-                        >;
-                };
+      >;
+    };
 
-                number_layer {
+    number_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       | BT_CLR|     |       |   7   |   8   |   9   |       |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -46,15 +46,15 @@
 //                         |  NUM  |       |       |     |       |   0   |       |
 //                         -------------------------     -------------------------
 
-                        bindings = <
+      bindings = <
    &none  &none  &none  &none  &none  &bt BT_CLR         &none  &kp N7  &kp N8  &kp N9  &none  &none    
    &none  &none  &kp LG(X) &kp LG(C) &kp LG(V) &none              &none  &kp N4  &kp N5  &kp N6  &none  &none    
    &none  &none  &none  &none  &none  &none              &none  &kp N1  &kp N2  &kp N3  &none  &none    
                         &trans &trans &trans             &trans &kp 0 &trans 
-                        >;
-                };
+      >;
+    };
 
-                symbol_layer {
+    symbol_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |   !   |   @   |   *   |   &   |   |   |     |   |   |   [   |   ^   |   ]   |   :   |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -65,13 +65,13 @@
 //                         |       |  SYM  |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
-                        bindings = <
+      bindings = <
    &none  &kp EXCL &kp AT &kp ASTRK &kp AMPS &kp PIPE      &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
    &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp D        &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
    &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp B   &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
                         &trans &trans &trans    &trans &trans &trans 
-                          >;
-               };
-        };
+      >;
+    };
+  };
 };
 
