@@ -40,6 +40,7 @@
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |ESC_NUM|BSP_SYM|TAB_SFT|     |MIN_ARR|SPC_NAV|ENT_THU|
+//                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 
       bindings = <
@@ -53,19 +54,23 @@
     number_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       | BT_CLR|     |       |   7   |   8   |   9   |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |  CUT  | COPY  | PASTE |       |     |       |   4   |   5   |   6   |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |   1   |   2   |   3   |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |  NUM  |       |       |     |       |   0   |       |
+//                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 
       bindings = <
    &none  &none  &none  &none  &none  &bt BT_CLR         &none  &kp N7  &kp N8  &kp N9  &none  &none    
-   &none  &none  &kp LG(X) &kp LG(C) &kp LG(V) &none              &none  &kp N4  &kp N5  &kp N6  &none  &none    
+   &none  &none  &kp LG(X) &kp LG(C) &kp LG(V) &none     &none  &kp N4  &kp N5  &kp N6  &none  &none    
    &none  &none  &none  &none  &none  &none              &none  &kp N1  &kp N2  &kp N3  &none  &none    
-                        &trans &trans &trans             &trans &kp 0 &trans 
+                        &trans &trans &trans             &trans &kp N0 &trans 
       >;
     };
 
@@ -78,31 +83,36 @@
 // |       |   `   |   +   |   -   |   =   |   €   |     |       |   {   |   #   |   }   |   \   |       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |       |  SYM  |       |     |       |       |       |
+//                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
       bindings = <
-   &none  &kp EXCL &kp AT &kp ASTRK &kp AMPS &kp PIPE      &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
-   &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp D        &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
-   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp B   &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
-                        &trans &trans &trans    &trans &trans &trans 
+   &none  &kp EXCL &kp AT &kp ASTRK &kp AMPS &kp PIPE            &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
+   &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp LA(N3)           &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
+   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp LA(LS(N2))  &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
+                                  &trans &trans &trans           &trans &trans &trans 
       >;
     };
 
     navigation_layer {
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       |       |       |  Up   |       |       |
+// |       |       |       |       |       |       |     |       | Home  |  Up   |  End  | Page  |       |
+// |       |       |       |       |       |       |     |       |       |       |       |  Up   |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       |       | Left  | Down  | Right |       |
+// |       |       |       |       |       |       |     |       | Left  | Down  | Right | Page  |       |
+// |       |       |       |       |       |       |     |       |       |       |       | Down  |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// |       |       |       |Screen |       |       |     | Prev  | Prev  | Next  | Next  | Fwd   |       |
+// |       |       |       |Capture|       |       |     |History|  Tab  |Window |  Tab  |History|       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |       |  Del  |       |     |       |  NAV  |       |
+//                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
-      bindings = <
-   &none    &none   &none   &none   &none   &none        &none   &none   &kp UP  &none   &kp PG_UP   &none
+      bindings = < 
+   &none    &none   &none   &none   &none   &none        &none   &kp HOME &kp UP   &kp END   &kp PG_UP &none
    &none    &none   &none   &none   &none   &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none
-   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
+   &none    &none   &none   &kp LC(LS(N5))  &none   &none        &kp LG(LBRC)  &kp LG(LS(LBRC))  &kp LG(GRAVE)  &kp LG(LS(RBRC))  &kp LG(RBRC)  &none
                             &trans  &kp DEL &trans       &trans  &trans  &trans 
       >;
     };
@@ -110,12 +120,16 @@
 //    arrange_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
-// -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
-//                         |       |       |       |     |       |  NAV  |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// -------------------------------------------------     -------------------------------------------------
+//                         |       |       |       |     |       |       |       |
+//                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
 //      bindings = <
