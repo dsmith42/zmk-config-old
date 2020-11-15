@@ -98,23 +98,23 @@
 
     navigation_layer {
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       | Home  |  Up   |  End  | Page  |       |
+// |       | Vol + |       |       |       |       |     |       | Home  |  Up   |  End  | Page  |       |
 // |       |       |       |       |       |       |     |       |       |       |       |  Up   |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |       | Left  | Down  | Right | Page  |       |
+// |       | Vol - |       |       |       |       |     |       | Left  | Down  | Right | Page  |       |
 // |       |       |       |       |       |       |     |       |       |       |       | Down  |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |Screen |       |       |     | Prev  | Prev  | Next  | Next  | Fwd   |       |
-// |       |       |       |Capture|       |       |     |History|  Tab  |Window |  Tab  |History|       |
+// |       | Vol   |       |Screen |       |       |     | Prev  | Prev  | Next  | Next  | Fwd   |       |
+// |       | Mute  |       |Capture|       |       |     |History|  Tab  |Window |  Tab  |History|       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |       |  Del  |       |     |       |  NAV  |       |
 //                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
       bindings = < 
-   &none    &none   &none   &none   &none   &none        &none   &kp HOME &kp UP   &kp END   &kp PG_UP &none
-   &none    &none   &none   &none   &none   &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none
-   &none    &none   &none   &kp LG(LS(N5))  &none   &none        &kp LG(LBRC)  &kp LG(LS(LBRC))  &kp LG(GRAVE)  &kp LG(LS(RBRC))  &kp LG(RBRC)  &none
+   &none  &kp F11  &none   &none   &none   &none        &none   &kp HOME &kp UP   &kp END   &kp PG_UP &none
+   &none  &kp F10  &none   &none   &none   &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none
+   &none  &kp F12  &none   &kp LG(LS(N5))  &none   &none        &kp LG(LBRC)  &kp LG(LS(LBRC))  &kp LG(GRAVE)  &kp LG(LS(RBRC))  &kp LG(RBRC)  &none
                             &trans  &kp DEL &trans       &trans  &trans  &trans 
       >;
     };
