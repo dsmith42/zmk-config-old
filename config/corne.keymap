@@ -92,7 +92,8 @@
                             &trans  &kp DEL &trans       &trans  &trans  &trans 
                          >;
                 };
-                arrange_layer {
+
+//                arrange_layer {
 // -------------------------------------------------     -------------------------------------------------
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
@@ -103,13 +104,13 @@
 //                         |       |       |       |     |       |  NAV  |       |
 //                         -------------------------     -------------------------
 //
-                        bindings = <
-   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
-   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
-   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
-                        &trans &trans &trans    &trans &trans &trans 
-                         >;
-               };
+//                        bindings = <
+//   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
+//   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
+//   &none    &none   &none   &none   &none   &none        &none   &none   &none   &none   &none   &none
+//                        &trans &trans &trans    &trans &trans &trans 
+//                         >;
+//               };
         };
 };
 
