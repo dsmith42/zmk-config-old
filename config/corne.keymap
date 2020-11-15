@@ -43,10 +43,10 @@
 //                         -------------------------     -------------------------
 
       bindings = <
-   &none &hm LCTL Q &hm LALT W &hm LGUI F   &kp P   &kp G        &kp J    &kp L   &hm LGUI U &hm LALT Y &hm LCTL SCLN &none
-   &none LCTL &kp A   &kp R    &kp S   &hm LSFT T   &kp D        &kp H    &kp N   &kp E   &kp I  &kp O    &none
-   &none &kp LSFT &kp Z   &kp X    &kp C   &kp V   &kp B        &kp K   &kp M  &kp CMMA &kp DOT &kp QUOT &none
-               &lt NUM ESC &lt SYM BKSP &mt LSFT TAB      &kp MINUS &lt NAV SPC &kp RET
+   &none &hm LCTL Q  &hm LALT W  &hm LGUI F  &kp P  &kp G        &kp J  &kp L  &hm LGUI U  &hm LALT Y  &hm LCTRL SCLN  &none
+   &none &kp A       &kp R       &kp S  &hm LSFT T  &kp D        &kp H  &hm LSFT N  &kp E  &kp I  &kp O  &none
+   &none &kp Z       &kp X       &kp C  &kp V       &kp B        &kp K   &kp M  &kp CMMA &kp DOT &kp QUOT &none
+                  &lt NUM ESC  &lt SYM BKSP  &mt LSFT TAB        &kp MINUS &lt NAV SPC &kp RET
       >;
     };
 
