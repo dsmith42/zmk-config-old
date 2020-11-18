@@ -159,7 +159,7 @@
 //                         -------------------------     -------------------------
 
       bindings = <
-   &none  &bt BT_CLR  &none  &bt BT_PRV  &bt BT_NXT  &none    &none  &kp LG(LC(LA(SPC)))  &none  &none  &kp LG(PLUS)  &none
+   &none  &bt BT_CLR  &none  &bt BT_SEL 0  &bt BT_NXT  &none    &none  &kp LG(LC(LA(SPC)))  &none  &none  &kp LG(PLUS)  &none
    &none  &none  &none  &none  &none  &none                   &none  &kp CAPS  &kp LG(LC(SPC))  &none  &kp LG(MINUS)  &none
    &none  &none  &none  &none  &none  &none                   &none  &none  &none  &none  &none  &none
                      &trans  &trans  &trans                   &trans  &trans  &trans 
