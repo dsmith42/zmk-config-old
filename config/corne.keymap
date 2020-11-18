@@ -137,7 +137,7 @@
 //
       bindings = <
    &none  &kp LC(LA(N1))  &kp LC(LA(N2))  &kp LC(LA(ENTER)) &kp LC(LA(N5))  &kp LC(LA(N6))     &none  &kp LC(LA(U))  &kp LC(LA(UP))  &kp LC(LA(I))  &none  &none
-   &none  &kp LC(LA(D))   &kp LC(LA(E))   &kp LC(LA(F))   &kp LC(LA(T))   &kp LC(LA(G))      &kp LC(LA(LG(RIGHT)))  &kp LC(LA(LEFT))  &kp LC(LA(DOWN))  &kp LC(LA(RIGHT))  &kp LC(LA(LG(LEFT)))  &none
+   &none  &kp LC(LA(D))   &kp LC(LA(E))   &kp LC(LA(F))   &kp LC(LA(T))   &kp LC(LA(G))      &kp LC(LA(LG(LEFT)))  &kp LC(LA(LEFT))  &kp LC(LA(DOWN))  &kp LC(LA(RIGHT))  &kp LC(LA(LG(RIGHT)))  &none
    &none  &kp LC(LA(CMMA)) &kp LC(LA(N3)) &kp LC(LA(C))   &kp LC(LA(N4))  &kp LC(LA(DOT))    &none  &kp LC(LA(J))   &kp LC(LA(BKSP))  &kp LC(LA(K))  &none  &none 
                                                                      &trans &trans &trans    &trans &trans &trans 
       >;
