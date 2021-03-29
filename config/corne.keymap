@@ -83,7 +83,7 @@
 // -------------------------------------------------     -------------------------------------------------
 // |       |   ~   |   <   |   %   |   >   |   £   |     |   ?   |   (   |   $   |   )   |   /   |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |   `   |   +   |   -   |   =   |   €   |     |       |   {   |   #   |   }   |   \   |       |
+// |       |   `   |      |       |   =   |   €   |     |   +   |   {   |   #   |   }   |   \   |       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |  FUN  |  SYM  |       |     |       |       |       |
 //                         |       |       |       |     |       |       |       |
@@ -92,7 +92,7 @@
       bindings = <
    &none  &kp EXCL &kp AT &kp ASTRK &kp AMPS &kp PIPE            &kp PIPE &kp LBKT &kp CARET &kp RBKT &kp COLON &none
    &none  &kp TILDE &kp LT &kp PRCNT &kp GT &kp LA(N3)           &kp QMARK &kp LPAR &kp DLLR &kp RPAR &kp FSLH &none
-   &none  &kp GRAVE &kp PLUS &kp MINUS &kp EQUAL &kp LA(LS(N2))  &none &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
+   &none  &kp GRAVE &none &none &kp EQUAL &kp LA(LS(N2))  &kp PLUS &kp LBRC &kp HASH &kp RBRC &kp BSLH &none
                                   &lt FUN ESC &trans &trans           &trans &trans &trans 
       >;
     };
