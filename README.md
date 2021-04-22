@@ -3,6 +3,7 @@ Here is the config file for my CRKBD layout.
 
 It uses layers to shrink they keyboard so that finger travel is a maximum of 1 unit from the home row.
 
+```
 DEFAULT_LAYER
 -------------------------------------------------     -------------------------------------------------
 |       |   Q   |   W   |   F   |   P   |   G   |     |   J   |   L   |   U   |   Y   |   ;   |       |
@@ -105,4 +106,4 @@ function_layer
                         |       |       |       |     |       |       |       |
                         -------------------------     -------------------------
 
-
+```
