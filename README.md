@@ -1,5 +1,5 @@
 # zmk-config
-Here is the config file for my CRKBD layout.
+Here is ZMK config file for my CRKBD layout.  You can find out more about ZMK firmware [here](https://zmkfirmware.dev/)
 
 It uses layers to shrink they keyboard so that finger travel is a maximum of 1 unit from the home row.
 
