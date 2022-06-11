@@ -56,22 +56,22 @@
 
     number_layer {
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       | Zoom  | Zoom  |     |   :   |   7   |   8   |   9   |   0   |       |
-// |       |       |       |       | Mic   | Video |     |       |       |       |       |       |       |
+// |       | ZOOM  |       |       |       |       |     |   :   |   7   |   8   |   9   |   0   |       |
+// |       | MIC   |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |Select |  CUT  | COPY  | PASTE |       |     |   .   |   4   |   5   |   6   |   /   |       |
-// |       | All   |       |       |       |       |     |       |       |       |       |       |       |
+// |       | ZOOM  |  CUT  | COPY  | PASTE |       |     |   .   |   4   |   5   |   6   |   /   |       |
+// |       | VIDEO |       |       |       |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       |       |       |       |       |       |     |   +   |   1   |   2   |   3   |   *   |       |
-// |       |       |       |       |       |       |     |       |       |       |       |       |       |
+// |       |       |       |       |ALFRED |       |     |   +   |   1   |   2   |   3   |   *   |       |
+// |       |       |       |       | PASTE |       |     |       |       |       |       |       |       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |  NUM  | FUN   |       |     |   -   |       |       |
 //                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 
       bindings = <
-   &none  &none  &none  &kp ASTRK  &kp LG(LS(A))  &kp LG(LS(V))     &kp COLON &kp N7  &kp N8  &kp N9  &kp N0  &none    
-   &none  &kp LG(A)  &kp LG(X) &kp LG(C) &kp LG(V) &none            &kp DOT  &kp N4  &kp N5  &kp N6  &kp FSLH &none    
+   &none  &kp LG(LS(A))  &none  &none &none &none         &kp COLON &kp N7  &kp N8  &kp N9  &kp N0  &none    
+   &none  &kp LG(LS(A))  &kp LG(X) &kp LG(C) &kp LG(V) &none            &kp DOT  &kp N4  &kp N5  &kp N6  &kp FSLH &none    
    &none  &none  &none  &none  &none  &none                     &kp PLUS  &kp N1  &kp N2  &kp N3  &none  &none    
                         &trans &lt FUN BKSP &trans                    &trans &trans &trans 
       >;
@@ -100,23 +100,23 @@
     navigation_layer {
       //TODO work out how to access volume controls from zmk o mac
 // -------------------------------------------------     -------------------------------------------------
-// |       | Vol + |       |       |       |       |     |       | Home  |  Up   |  End  | Page  |       | 
-// |       |       |       |       |       |       |     |       |       |       |       |  Up   |       |
+// |       | Vol + |       |       |MISSION|       |     |       | Home  |  Up   |  End  | Page  |       | 
+// |       |       |       |       |CONTROL|       |     |       |       |       |       |  Up   |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       | Vol - |       |       |       |       |     |       | Left  | Down  | Right | Page  |       |
-// |       |       |       |       |       |       |     |       |       |       |       | Down  |       |
+// |       | Vol   |       |       |       |       |     |       | Left  | Down  | Right | Page  |       |
+// |       | MUTE  |       |       |       |       |     |       |       |       |       | Down  |       |
 // -------------------------------------------------     -------------------------------------------------
-// |       | Vol   |       |Screen |       |       |     | Prev  | Prev  | Next  | Next  | Fwd   |       |
-// |       | Mute  |       |Capture|       |       |     |History|  Tab  |Window |  Tab  |History|       |
+// |       | Vol - |       |Screen |       |       |     | Prev  | Prev  | Next  | Next  | Fwd   |       |
+// |       |       |       |Capture|       |       |     |History|  Tab  |Window |  Tab  |History|       |
 // -------------------------------------------------     -------------------------------------------------
 //                         |       |  Del  |       |     |       |  NAV  |       |
 //                         |       |       |       |     |       |       |       |
 //                         -------------------------     -------------------------
 //
       bindings = < 
-   &none  &kp F11  &none   &none   &none   &none        &none   &kp HOME &kp UP   &kp END   &kp PG_UP &none
+   &none  &kp F12  &none   &none   &kp F3  &none        &none   &kp HOME &kp UP   &kp END   &kp PG_UP &none
    &none  &kp F10  &none   &none   &none   &none        &none   &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &none
-   &none  &kp F12  &none   &kp LG(LS(N5))  &none   &none        &kp LG(LBKT)  &kp LG(LS(LBKT))  &kp LG(GRAVE)  &kp LG(LS(RBKT))  &kp LG(RBKT)  &none
+   &none  &kp F11  &none   &kp LG(LS(N5))  &none   &none        &kp LG(LBKT)  &kp LG(LS(LBKT))  &kp LG(GRAVE)  &kp LG(LS(RBKT))  &kp LG(RBKT)  &none
                             &trans  &kp DEL &trans       &trans  &trans  &trans 
       >;
     };
@@ -160,7 +160,7 @@
 //                         -------------------------     -------------------------
 
       bindings = <
-   &none  &bt BT_CLR  &none  &bt BT_SEL 0  &bt BT_NXT  &none    &none  &kp LG(LC(LA(SPC)))  &none  &none  &kp LG(PLUS)  &none
+   &none  &bt BT_CLR  &none  &bt BT_SEL 0  &bt BT_NXT  &none    &none  &kp LG(LC(LA(SPC)))  &none  &none  &kp LG(EQUAL)  &none
    &none  &none  &none  &none  &none  &none                   &none  &kp CAPS  &kp LG(LC(SPC))  &none  &kp LG(MINUS)  &none
    &none  &none  &none  &none  &none  &none                   &none  &none  &none  &none  &none  &none
                      &trans  &trans  &trans                   &trans  &trans  &trans 
